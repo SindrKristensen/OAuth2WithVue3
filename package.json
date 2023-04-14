@@ -12,12 +12,26 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^2.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@popperjs/core": "^2.11.7",
+    "@vueuse/core": "^9.13.0",
+    "bootstrap": "^5.2.3",
+    "highlight.js": "^11.7.0",
+    "locale-index-of": "^3.1.0",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
+    "@types/lodash": "^4.14.194",
     "@types/node": "^18.14.2",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
