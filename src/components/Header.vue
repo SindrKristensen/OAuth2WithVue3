@@ -27,19 +27,19 @@
         <button
           v-if="!isAuthenticated && !isLoading"
           id="qsLoginBtn"
-          class="btn btn-primary btn-margin"
+          class="btn btn-margin"
           @click.prevent="login"
         >
-          Login
+          <font-awesome-icon class="icon_color" icon="right-to-bracket" size="xl" />
         </button>
 
         <button
           v-if="isAuthenticated"
           id="qsLoginBtn"
-          class="btn btn-primary btn-margin"
+          class="btn btn-margin"
           @click.prevent="logout"
         >
-          LogOut
+          <font-awesome-icon class="icon_color" icon="right-from-bracket" size="xl" />
         </button>
       </div>
     </div>

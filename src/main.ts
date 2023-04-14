@@ -16,7 +16,9 @@ import {
   faPlus,
   faPowerOff,
   faUser,
-  faLink
+  faLink,
+  faRightFromBracket,
+  faRightToBracket
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { createAuth0 } from '@auth0/auth0-vue';
@@ -26,7 +28,18 @@ import hljsVuePlugin from '@highlightjs/vue-plugin';
 
 hljs.registerLanguage('json', json);
 
-library.add(faHatWizard, faStore, faCartShopping, faMinus, faPlus, faLink, faUser, faPowerOff);
+library.add(
+  faHatWizard,
+  faStore,
+  faCartShopping,
+  faMinus,
+  faPlus,
+  faLink,
+  faUser,
+  faPowerOff,
+  faRightFromBracket,
+  faRightToBracket
+);
 
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon);
