@@ -14,8 +14,10 @@
       </div>
     </div>
 
-    <div class="row">
-      <highlightjs language="json" :code="JSON.stringify(user, null, 2)" />
+    <div class="content">
+      <input type="file" accept="video/*" @change="handleFileUpload($event)" class="form-control" />
+
+      <video v-show="file" id="video-preview" controls />
     </div>
   </div>
 </template>
@@ -25,4 +27,24 @@ import { useAuth0, User } from '@auth0/auth0-vue';
 import { ref } from 'vue';
 const auth0 = useAuth0();
 const user = ref<User>(auth0.user);
+
+const file = ref();
+
+const handleFileUpload = (event: any) => {
+  file.value = event.target.files[0];
+
+  if (file.value) {
+    previewVideo();
+  }
+};
+
+const previewVideo = () => {
+  let video = document.getElementById('video-preview');
+  let reader = new FileReader();
+
+  reader.readAsDataURL(file.value);
+  reader.addEventListener('load', () => {
+    video!.src = reader.result;
+  });
+};
 </script>
